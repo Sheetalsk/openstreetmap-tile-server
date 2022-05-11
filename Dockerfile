@@ -1,4 +1,4 @@
-FROM overv/openstreetmap-tile-server:1.5.0
+FROM overv/openstreetmap-tile-server:2.0.0
 
 COPY ./singapore.osm.pbf /data.osm.pbf
 
