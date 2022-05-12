@@ -1,6 +1,9 @@
-FROM overv/openstreetmap-tile-server:2.0.0
+FROM overv/openstreetmap-tile-server:1.5.0
 
 COPY ./singapore.osm.pbf /data.osm.pbf
+
+RUN apt-get upgrade -y
+RUN apt-get install -y sasl2-bin
 
 ENV ALLOW_CORS enabled
 ENV USER renderer
